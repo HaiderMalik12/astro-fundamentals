@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Mycomponent from "../components/Mycomponent.astro";
 ---
 
 <Layout title="Welcome to Astro Project">
@@ -43,7 +44,7 @@ import Card from "../components/Card.astro";
     <ul role="list" class="link-card-grid">
       <Card
         href="https://docs.astro.build/"
-        title="Documentation"
+        title="New Card"
         body="Learn how Astro works and explore the official API docs."
       />
       <Card
@@ -61,6 +62,9 @@ import Card from "../components/Card.astro";
         title="Update Card Title"
         body="Come say hi to our amazing Discord community. ❤️"
       />
+
+      <!-- My Component -->
+      <Mycomponent title="NEW COMPONENT" greeting="Hello Guys!" />
     </ul>
   </main>
 </Layout>
