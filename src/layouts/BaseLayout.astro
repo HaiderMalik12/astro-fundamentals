@@ -1,0 +1,22 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+type Props = MarkdownLayoutProps<{
+  title: string;
+  author: string;
+  date: string;
+}>;
+const { frontmatter, url } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <h1>{frontmatter.title} by {frontmatter.author} {frontmatter.url}</h1>
+
+    <!-- Inject my wrapped html code here -->
+    <slot />
+    <p>Written on : {frontmatter.date}</p>
+  </body>
+</html>
